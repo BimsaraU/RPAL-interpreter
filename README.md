@@ -10,7 +10,7 @@ Java implementation of RPAL (Right-reference Pedagogical Algorithmic Language). 
   - Oracle JDK: https://www.oracle.com/java/technologies/downloads/
   - Eclipse Temurin: https://adoptium.net/
   - Microsoft Build of OpenJDK
-- **GNU Make** (optional — only if you want `make`). Otherwise compile with raw `javac`.
+- **GNU Make** (optional - only if you want `make`). Otherwise compile with raw `javac`.
 - Any OS with a JDK (Windows / Linux / macOS).
 
 Verify install:
