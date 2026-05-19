@@ -1,0 +1,5 @@
+let Sum(A) =
+    let rec S n =
+        n eq 0 -> 0 | A n + S(n-1)
+    in S (Order A)
+in Print(Sum(1,2,3,4,5))

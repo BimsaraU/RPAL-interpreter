@@ -1,0 +1,13 @@
+// Sample RPAL program.
+// Computes 5! and sums a tuple, prints both as a tuple result.
+
+let rec fact n = n eq 0 -> 1 | n * fact (n-1)
+in
+let Sum T =
+    let rec S i =
+        i gr (Order T) -> 0 | T i + S (i+1)
+    in S 1
+in
+let greet name = Conc 'Hello, ' (Conc name '!')
+in
+Print ( fact 5, Sum (10,20,30,40), greet 'RPAL' )
