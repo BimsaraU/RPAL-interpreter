@@ -27,38 +27,6 @@ $env:Path = "C:\Program Files\Java\jdk-26.0.1\bin;" + $env:Path
 ```
 
 ---
-
-## Persist `javac` on PATH (Windows)
-
-Session-only (current PowerShell window only):
-
-```powershell
-$env:Path = "C:\Program Files\Java\jdk-26.0.1\bin;" + $env:Path
-```
-
-Permanent (user-level — survives reboot, applies to new shells):
-
-```powershell
-[Environment]::SetEnvironmentVariable(
-  "Path",
-  "C:\Program Files\Java\jdk-26.0.1\bin;" + [Environment]::GetEnvironmentVariable("Path","User"),
-  "User")
-```
-
-Then **close and reopen** the terminal. Verify with `javac -version`.
-
-GUI alternative: Start → "Edit environment variables for your account" → `Path` → New → paste `C:\Program Files\Java\jdk-26.0.1\bin` → OK. Reopen terminal.
-
-Adjust the path if your JDK lives elsewhere — e.g. `C:\Program Files\Eclipse Adoptium\jdk-21.x.x\bin`.
-
-Also set `JAVA_HOME` (some tools need it):
-
-```powershell
-[Environment]::SetEnvironmentVariable("JAVA_HOME","C:\Program Files\Java\jdk-26.0.1","User")
-```
-
----
-
 ## Build
 
 ### Option A - Make
