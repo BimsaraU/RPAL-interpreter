@@ -61,7 +61,7 @@ Also set `JAVA_HOME` (some tools need it):
 
 ## Build
 
-### Option A — Make
+### Option A - Make
 
 ```
 make
@@ -69,14 +69,14 @@ make
 
 Produces compiled classes under `out/`.
 
-### Option B — Raw javac (Windows PowerShell)
+### Option B - Raw javac (Windows PowerShell)
 
 ```powershell
 mkdir out -Force | Out-Null
 javac -d out -sourcepath src rpal20.java (Get-ChildItem -Recurse src -Filter *.java | ForEach-Object { $_.FullName })
 ```
 
-### Option C — Raw javac (Linux / macOS / bash)
+### Option C - Raw javac (Linux / macOS / bash)
 
 ```bash
 mkdir -p out
