@@ -3,3 +3,9 @@ plan.md
 out/*
 *.txt
 *.pdf
+!report.pdf
+*.tex
+*.toc
+*.aux
+*.log
+*.out
