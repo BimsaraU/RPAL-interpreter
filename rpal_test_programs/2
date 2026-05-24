@@ -1,0 +1,6 @@
+// Program to print the multiplication table of a given number
+let rec Table (n, i) =
+    i gr 10 -> ''
+    | (Print (ItoS n @Conc ' x ' @Conc ItoS i @Conc ' = ' @Conc ItoS (n*i) @Conc '\n'),
+       Table (n, i+1))
+in Table (5, 1)

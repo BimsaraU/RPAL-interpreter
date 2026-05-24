@@ -1,0 +1,6 @@
+// Program to count the number of even and odd numbers in a given range
+let rec Count (low, high, evens, odds) =
+    low gr high -> (Print ('Even: ' @Conc ItoS evens), Print(' '), Print ('Odd: ' @Conc ItoS odds))
+    | (low - (low/2)*2) eq 0 -> Count (low+1, high, evens+1, odds)
+    | Count (low+1, high, evens, odds+1)
+in Count (1, 20, 0, 0)
