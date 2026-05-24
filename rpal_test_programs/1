@@ -1,0 +1,6 @@
+// Program to find the smallest of three numbers
+let Smallest (a, b, c) =
+    a ls b & a ls c -> a
+    | b ls c -> b
+    | c
+in Print (Smallest (5, 3, 7))

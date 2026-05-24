@@ -1,0 +1,12 @@
+// Program to display all perfect numbers in a given range
+let rec SumDiv (n, i) =
+    i ge n -> 0
+    | (n - (n/i)*i eq 0 -> i | 0) + SumDiv (n, i+1)
+within
+    IsPerfect n = SumDiv (n, 1) eq n
+within
+    rec FindPerfect (low, high) =
+        low gr high -> ''
+        | (IsPerfect low -> Print (ItoS low @Conc '\n') | '',
+           FindPerfect (low+1, high))
+in FindPerfect (1, 30)

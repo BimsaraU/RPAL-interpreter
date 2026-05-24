@@ -1,0 +1,5 @@
+// Program to find the sum of digits of a given number
+let rec SumDigits n =
+    n eq 0 -> 0
+    | (n - (n/10)*10) + SumDigits (n/10)
+in Print (SumDigits 1234)

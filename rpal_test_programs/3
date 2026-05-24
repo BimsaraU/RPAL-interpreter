@@ -1,0 +1,5 @@
+// Program to find the power of a number (x raised to n)
+let Power (x, n) =
+    n eq 0 -> 1
+    | x ** n
+in Print (Power (2, 10))

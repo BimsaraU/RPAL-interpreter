@@ -1,0 +1,9 @@
+// Program to check if the sum of digits of a given number is odd or even
+let rec SumDigits n =
+    n eq 0 -> 0
+    | (n - (n/10)*10) + SumDigits (n/10)
+within
+    Check n =
+        let S = SumDigits n
+        in Print (S - (S/2)*2 eq 0 -> 'Even' | 'Odd')
+in Check 1231

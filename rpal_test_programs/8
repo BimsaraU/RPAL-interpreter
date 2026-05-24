@@ -1,0 +1,9 @@
+// Program to generate all permutations of 3 numbers                                                                                                
+let Perm (a, b, c) =                                                                                                                                
+    (Print ((a, b, c)),                                                                                                                             
+     Print ((a, c, b)),                                                                                                                             
+     Print ((b, a, c)),                                                                                                                             
+     Print ((b, c, a)),                                                                                                                             
+     Print ((c, a, b)),                                                                                                                             
+     Print ((c, b, a)))                                                                                                                             
+in Perm (1, 2, 3)  
