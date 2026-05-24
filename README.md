@@ -95,8 +95,26 @@ The Makefile takes `FILE=<path>` to choose the program. Default: `rpal_test_prog
 | `make l    FILE=rpal_test_programs/rpal_03`       | Echo source then run.           |
 | `make run`                                        | Run default sample.             |
 | `make clean`                                      | Remove `out/`.                  |
+| `make output FILE=rpal_test_programs/rpal_03`     | Print result + AST + ST + CSE trace to terminal. |
+| `make output FILE=rpal_test_programs/rpal_03 OUTPUT=result.txt` | Same, and save to file. |
 
 Each target auto-builds first if sources changed.
+
+### `make output` detail
+
+Runs all four stages in sequence and prints them to the terminal with section headers:
+
+```
+make output FILE=rpal_test_programs/rpal_01
+```
+
+To also save to a file, pass `OUTPUT=<filename>`:
+
+```
+make output FILE=rpal_test_programs/rpal_01 OUTPUT=result.txt
+```
+
+Output is written to the terminal **and** the file simultaneously (via `tee`). Omitting `OUTPUT` prints to terminal only — no file is created.
 
 ### How to run a test program (end-to-end)
 
