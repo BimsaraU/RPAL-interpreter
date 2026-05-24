@@ -118,7 +118,7 @@ Output is written to the terminal **and** the file simultaneously (via `tee`). O
 
 ### How to run a test program (end-to-end)
 
-1. Put the source anywhere — e.g. `rpal_test_programs/my_test.rpal`.
+1. Put the source anywhere. e.g. `rpal_test_programs/my_test.rpal`.
 2. Build once: `make` (or the raw `javac` line above).
 3. Run: `make run FILE=rpal_test_programs/my_test.rpal`.
 4. Inspect stages if needed: `make ast FILE=...`, `make sast FILE=...`, `make cse FILE=...`.
